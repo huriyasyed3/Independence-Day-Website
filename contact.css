@@ -1,0 +1,129 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(223, 249, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+img{
+    width: 200px;
+    height: 100px;
+    margin-right: 40%;
+    
+}
+nav{
+   margin-right: 30%;
+    display: flex;
+    align-items: center;
+    height:100px;
+    width: 100%;
+    justify-content: center;
+    
+}
+nav li a {
+    text-decoration: none;
+    border: 2px solid green;
+    border-radius: 50px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin:10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:rgba(108, 107, 107, 0.862);;
+    font-size: 18px;
+    position: relative;
+     z-index: 9;
+    overflow: hidden;
+    
+   
+   
+}
+nav li{
+    list-style-type: none;
+    transition: all ease 0.4s; 
+    position: relative;
+    z-index: 19;
+
+}
+nav li ::after{
+    content:"";
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    left:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+nav li a:hover::after{
+    bottom: 0;
+    border-radius: 0;
+
+}
+nav li:hover a{
+    color: rgb(55, 236, 55);
+
+}
+
+.contact-container {
+    background-image: linear-gradient(rgb(152, 217, 152),rgb(203, 241, 203),rgb(154, 244, 154));
+    border-radius: 10px;
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: green;
+    margin-bottom: 20px;
+    
+}
+
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: darkgreen;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}

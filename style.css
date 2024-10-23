@@ -1,0 +1,342 @@
+*{
+    margin:0;
+    padding: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#page1{
+    min-height:100vh;
+    width: 100%;
+    background-color: rgb(223, 249, 223);
+    position:relative;
+    padding: 0 2vw;
+}
+#img-logo{
+    width: 200px;
+    height: 100px;
+    margin-right: 40%;
+    
+}
+nav{
+   margin-right: 30%;
+    display: flex;
+    align-items: center;
+    height:100px;
+    width: 100%;
+    justify-content: center;
+    
+}
+nav li a {
+    text-decoration: none;
+    border: 2px solid green;
+    border-radius: 50px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin:10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:rgba(108, 107, 107, 0.862);;
+    font-size: 18px;
+    position: relative;
+     z-index: 9;
+    overflow: hidden;
+    
+   
+   
+}
+nav li{
+    list-style-type: none;
+    transition: all ease 0.4s; 
+    position: relative;
+    z-index: 19;
+
+}
+nav li ::after{
+    content:"";
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    left:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+nav li a:hover::after{
+    bottom: 0;
+    border-radius: 0;
+
+}
+nav li:hover a{
+    color: rgb(55, 236, 55);
+
+}
+.center{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2vw;
+}
+.right h1{
+    font-size: 8vw;
+    width: 30vw;
+    padding-right: 800px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 8vw;
+
+
+
+}
+.right{
+    margin-right:500px;
+}
+.left img{
+ width: 600px;
+ height: 450px;
+ margin-top: 30px;
+}
+
+@keyframes animateHeading {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        color: green;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+        color: darkgreen;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        color: green;
+    }
+}
+
+.right h1 {
+    font-size: 8vw;
+    width: 30vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 8vw;
+    animation: animateHeading 4s ease-in-out infinite;
+    /* Adjust 3s duration and ease-in-out timing function as needed */
+}
+
+@keyframes animateImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left img {
+    width: 600px;
+    height: 450px;
+    margin-top: 30px;
+    animation: animateImage 2s ease-out;
+    /* Adjust 2s duration and ease-out timing function as needed */
+}
+/* About Section */
+/* Centering and Layout */
+.center1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(rgb(204, 236, 204),white,rgb(226, 243, 226));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* margin-left: 80px; */
+}
+
+/* Left Section (Text) */
+.left1 {
+    width: 60%;
+}
+
+.left1 h2 {
+    font-size: 40px;
+    color: green;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.left1 h3 {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    /* opacity: 0; */
+     transform: translateY(20px); 
+}
+
+/* Right Section (Image) */
+.right1 {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right1 img {
+    width: 100;
+    height: auto;
+    border-radius: 10px;
+    /* margin-left: 60px; */
+}
+
+/* History Section */
+#history {
+    text-align: center;
+    padding: 20px;
+    background-image: repeating-linear-gradient(rgb(197, 217, 197),rgb(166, 235, 166),rgb(182, 234, 182));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#history h2 {
+    font-size: 2.5em;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-item {
+    margin: 20px 0;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.timeline-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.timeline-item p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 50px;
+    color: #333;
+    text-align: justify;
+    width: 60%;
+    /* Remove or adjust these properties */
+    opacity: 1; /* Make sure the paragraph is visible */
+    transform: translateY(0); /* Position the paragraph correctly */
+}
+.timeline-item:hover p {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up */
+    color: green;
+}
+/* celebration Section */
+.celebrations-content {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.celebrations-content h2 {
+    color: green;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.celebrations-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 32%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+/* Contact Section */
+.contact-container {
+    background-image: linear-gradient(rgb(152, 217, 152),rgb(203, 241, 203),rgb(154, 244, 154));
+    border-radius: 10px;
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: green;
+    margin-bottom: 20px;
+    
+}
+
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: darkgreen;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}

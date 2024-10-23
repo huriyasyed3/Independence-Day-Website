@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Independence Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="page1">
+    <nav>
+        <img src="aazadii-removebg-preview.png" id="img-logo" alt="aazadii">   
+        
+        <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="celebrations.html">celebrations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        
+        </nav>
+        <div class="center">
+            <div class="left">
+                <img src="flag-removebg-preview.png" alt="flag">
+
+            </div>
+            <div class="right">
+                <h1 id="heading">Happy<br> Independence<br> Day</h1>
+                    
+              
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+<!-- About Section -->
+<div class="center1">
+    <div class="left1">
+        <h2><b>About Independence Day</b></h2>
+        <h3>
+            Pakistan’s Independence Day is celebrated annually on
+             August 14th. It marks the day in 1947 when Pakistan 
+             gained independence from British rule, following the 
+             end of British India. This day is a national holiday 
+             and holds immense significance for the people of Pakistan 
+             as it symbolizes the country’s birth and the realization 
+             of the aspirations of millions who fought for freedom.
+        </h3>
+    </div>
+    <div class="right1">
+        <img src="Minar e Pakistan.avif" alt="Minar-e-Pakistan">
+        
+    </div>
+</div>
+</div>
+
+</div>
+
+<script>
+window.onload = function() {
+const text = document.querySelector('.left1 h3');
+text.style.transition = 'all 1s ease-in-out';
+text.style.opacity = '1';
+text.style.transform = 'translateY(0)';
+};
+
+</script>
+<!-- History Section -->
+<section id="history">
+    <h2>History of Pakistan's Independence</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <img src="Lahore Resulation 1940.jpg" alt="1940 Lahore Resolution">
+            <p>The Lahore Resolution of 1940 was a significant moment in the struggle for Pakistan’s independence. It laid the foundation for a separate nation for Muslims in British India.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="1947 independence.jpg" alt="1947 Independence">
+            <p>On August 14, 1947, Pakistan was born as an independent nation, following the end of British rule in India. This marked a momentous occasion for millions of Muslims in the subcontinent.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="QA.jpg" alt="First Governor-General">
+            <p>Quaid-e-Azam Muhammad Ali Jinnah became the first Governor-General of Pakistan. His leadership was crucial in the establishment of the new nation.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="1956 constitution of pakistan.jpg" alt="Constitution of 1956">
+            <p>Pakistan adopted its first constitution in 1956, becoming the Islamic Republic of Pakistan. This was a major milestone in the country’s political development.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Celebration Section -->
+<div class="celebrations-content">
+    <h2>Independence Day Celebrations</h2>
+    <p>
+        Every year on the 14th of August, Pakistan comes alive with patriotic fervor as the nation celebrates its independence. 
+        Streets are adorned with flags, lights, and decorations. People participate in parades, concerts, and various cultural events to honor the sacrifices made for freedom.
+    </p>
+    <p>
+        The celebrations often include fireworks, speeches by prominent leaders, and special ceremonies in schools and colleges. 
+        Families gather to enjoy the day with traditional foods, and many participate in charity events to give back to the community.
+    </p>
+    <div class="images">
+        <img src="c1.jpg" alt="Celebration Image 1">
+        <img src="C2.jpg" alt="Celebration Image 2">
+        <img src="C3.jpg" alt="Celebration Image 3">
+    </div>
+</div>
+</div>
+</div>
+<script>
+window.onload = function() {
+const images = document.querySelectorAll('.images img');
+images.forEach((img, index) => {
+img.style.opacity = '0';
+img.style.transition = `opacity 0.5s ease ${index * 0.2}s`;
+img.style.opacity = '1';
+});
+};
+
+</script>
+<!-- Contact Section -->
+<div class="contact-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<div id="responseMessage"></div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
+
+if(name && email && message) {
+    document.getElementById('responseMessage').textContent = 'Thank you for your message, ' + name + '! We will get back to you shortly.';
+} else {
+    document.getElementById('responseMessage').textContent = 'Please fill in all fields.';
+}
+});
+
+</script>
+
+</body>
+ 
+</html>

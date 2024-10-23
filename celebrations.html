@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independence Day Celebrations</title>
+    <link rel="stylesheet" href="celebrations.css">
+</head>
+<body>
+    <div id="main">
+        <div id="page1">
+    <nav>
+        <img src="aazadii-removebg-preview.png" id="img-logo" alt="aazadii">   
+        
+        <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="celebrations.html">celebrations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        
+        </nav>
+        
+            <div class="celebrations-content">
+                <h2>Independence Day Celebrations</h2>
+                <p>
+                    Every year on the 14th of August, Pakistan comes alive with patriotic fervor as the nation celebrates its independence. 
+                    Streets are adorned with flags, lights, and decorations. People participate in parades, concerts, and various cultural events to honor the sacrifices made for freedom.
+                </p>
+                <p>
+                    The celebrations often include fireworks, speeches by prominent leaders, and special ceremonies in schools and colleges. 
+                    Families gather to enjoy the day with traditional foods, and many participate in charity events to give back to the community.
+                </p>
+                <div class="images">
+                    <img src="c1.jpg" alt="Celebration Image 1">
+                    <img src="C2.jpg" alt="Celebration Image 2">
+                    <img src="C3.jpg" alt="Celebration Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+    const images = document.querySelectorAll('.images img');
+    images.forEach((img, index) => {
+        img.style.opacity = '0';
+        img.style.transition = `opacity 0.5s ease ${index * 0.2}s`;
+        img.style.opacity = '1';
+    });
+};
+
+    </script>
+</body>
+</html>
